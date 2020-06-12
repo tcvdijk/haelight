@@ -19,7 +19,7 @@ Select one or more text layers in After Effects, then run `haelight.jsx` using:
 
 The script looks at the current contents of the text layer and stores the colours based on the _position_ in the text; the colours are not associated to the characters themselves. As a result, if you change the text of the layer, everything will become messed up and you should:
 1. Remove the `Haelight Setup` and `Haelight Apply` animators from the layer, and
-2. run hAElight again on it again.
+2. run hAElight on it again.
 
 ## Configuring the colours
 
