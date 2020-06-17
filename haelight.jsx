@@ -119,7 +119,7 @@ function highlight(layer) {
     mark(text,changes,"type",/(^|[\s(<>\(\)\{\}\[\]])(unsigned\w+)?(const\w+)?\**(void|char|int|float|double|bool|true|false)(\w+const)?\**($|[\s(<>\(\)\{\}\[\]:;])/g);
     mark(text,changes,"keyword",/(^|[\s(<>\(\)\{\}\[\]])(extern|class|struct|template|typedef|public|protected|private|using|for|while|do|if|else|throw|catch|return|#include)($|[\s(<>\(\)\{\}\[\]:;])/g);
     mark(text,changes,"type",/namespace/g);
-    mark(text,changes,"nonalpha",/[\(\)\[\]\{\}+\-*\/;:<>~=!\?]+/g);
+    mark(text,changes,"nonalpha",/[\(\)\[\]\{\}+\-*\/;,:<>~=!\?]+/g);
     mark(text,changes,"string",/[“"][^"”]*["”]/g);
     mark(text,changes,"comment",/\/\/[^\r\n]*/g);
     
