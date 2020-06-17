@@ -6,15 +6,17 @@
 //
 // Configure the colors below.
 var colors = {
-    plain:     {color:"[0.61,0.86,1]", prio:0 },
-    nonalpha:  {color:"[0.83,0.83,0.83]", prio:3 },
-    numbers:   {color:"[0.71,0.81,0.66]", prio:1 },
-    fun:       {color:"[0.86,0.86,0.67]", prio:1 },
-    keyword:   {color:"[0.77,0.53,0.75]", prio:2 },
-    in_angled: {color:"[0.81,0.57,0.47]", prio:3 },
-    type:      {color:"[0.34,0.61,0.84]", prio:3 },
-    comment:   {color:"[0.42,0.60,0.33]", prio:4 },
-    string:    {color:"[0.81,0.57,0.47]", prio:2 },
+    plain:     {color:"[0.61,0.86,1]", prio:0 },    // #9cdbff
+    nonalpha:  {color:"[0.83,0.83,0.83]", prio:3 }, // #d4d4d4
+    numbers:   {color:"[0.71,0.81,0.66]", prio:1 }, // #b5cfa8
+    fun:       {color:"[0.86,0.86,0.67]", prio:1 }, // #dbdbab
+    keyword:   {color:"[0.77,0.53,0.75]", prio:2 }, // #c487bf
+    in_angled: {color:"[0.81,0.57,0.47]", prio:3 }, // #cf9178
+    type:      {color:"[0.34,0.61,0.84]", prio:3 }, // #579cd6
+    comment:   {color:"[0.42,0.60,0.33]", prio:4 }, // #6b9954
+    string:    {color:"[0.81,0.57,0.47]", prio:2 }, // #cf9178
+    // background suggestion: #2b2b2b
+    // bright: #ffffe4
 }; 
 
 
@@ -117,7 +119,7 @@ function highlight(layer) {
     mark(text,changes,"type",/(^|[\s(<>\(\)\{\}\[\]])(unsigned\w+)?(const\w+)?\**(void|char|int|float|double|bool|true|false)(\w+const)?\**($|[\s(<>\(\)\{\}\[\]:;])/g);
     mark(text,changes,"keyword",/(^|[\s(<>\(\)\{\}\[\]])(extern|class|struct|template|typedef|public|protected|private|using|for|while|do|if|else|throw|catch|return|#include)($|[\s(<>\(\)\{\}\[\]:;])/g);
     mark(text,changes,"type",/namespace/g);
-    mark(text,changes,"nonalpha",/[\(\)\[\]\{\}+\-*\/;:<>~=!]+/g);
+    mark(text,changes,"nonalpha",/[\(\)\[\]\{\}+\-*\/;:<>~=!\?]+/g);
     mark(text,changes,"string",/[“"][^"”]*["”]/g);
     mark(text,changes,"comment",/\/\/[^\r\n]*/g);
     
